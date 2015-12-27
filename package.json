@@ -1,23 +1,23 @@
 {
-  "name": "grunt-emo",
+  "name": "grunt-panopta-style-guide-generator",
   "description": "A style-guide generator",
-  "version": "0.0.4",
-  "homepage": "https://github.com/martinjunior/emo",
+  "version": "0.0.5",
+  "homepage": "",
   "author": {
     "name": "Martin Duran",
-    "email": "martinduranwebdesign@gmail.com"
+    "email": "martin.duran@panopta.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/martinjunior/emo.git"
+    "url": "https://github.com/Panopta/panopta-style-guide-generator.git"
   },
   "bugs": {
-    "url": "https://github.com/martinjunior/emo/issues"
+    "url": "https://github.com/Panopta/panopta-style-guide-generator/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/martinjunior/emo/blob/master/LICENSE-MIT"
+      "url": "https://github.com/Panopta/panopta-style-guide-generator/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
