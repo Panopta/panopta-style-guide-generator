@@ -1,8 +1,8 @@
-# grunt-emo (Beta)
+# grunt-panopta-style-guide-generator (Beta)
 
 > A style-guide generator that uses [Swig.js](http://paularmstrong.github.io/swig/)
 
-Emo is a tool that scrapes documention from your source files which it then uses to generate a style-guide. Emo is capable of gathering documention from, essentially, any type of file, which allows you to easily document your JavaScript, HTML, or whatever other type of component that you'd like documented.
+The Panopta style-guide generator is a tool that scrapes documention from your source files which it then uses to generate a style-guide, capable of gathering documention from, essentially, any type of file, which allows you to easily document your JavaScript, HTML, or whatever other type of component that you'd like documented.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -10,23 +10,23 @@ This plugin requires Grunt `~0.4.5`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-emo --save-dev
+npm install grunt-panopta-style-guide-generator --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-emo');
+grunt.loadNpmTasks('grunt-panopta-style-guide-generator');
 ```
 
-## The "emo" task
+## The "style_guide" task
 
 ### Overview
-In your project's Gruntfile, add a section named `emo` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `style_guide` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-    emo: {
+    style_guide: {
         main: {
             options: {
                 path: { ... },
@@ -80,7 +80,7 @@ Note the example below. The right hand assignment is the path to the asset that 
 
 ```js
 grunt.initConfig({
-    emo: {
+    style_guide: {
         main: {
             options: {
                 copy: {
@@ -98,7 +98,7 @@ grunt.initConfig({
 
 ```js
 grunt.initConfig({
-    emo: {
+    style_guide: {
         main: {
             options: {
                 copy: {
@@ -120,11 +120,11 @@ grunt.initConfig({
 ```
 
 #### Custom Options
-Below, emo is configured to output the style-guide as well as its source in a custom location.
+Below, the Panopta style-guide generator is configured to output the style-guide as well as its source in a custom location.
 
 ```js
 grunt.initConfig({
-    emo: {
+    style_guide: {
         main: {
             options: {
                 path: {
@@ -151,7 +151,7 @@ grunt.initConfig({
 
 ## Documentation Syntax
 
-Emo searches for name/value combinations within your source files; these name/value combinations are then used within the `component.html` Swig template. Note that all values are parsed as markdown. Name/value combinations are expected to take the following format.
+The Panopta style-guide generator searches for name/value combinations within your source files; these name/value combinations are then used within the `component.html` Swig template. Note that all values are parsed as markdown. Name/value combinations are expected to take the following format.
 
 ```scss
 
@@ -171,7 +171,7 @@ Emo searches for name/value combinations within your source files; these name/va
 
 ```
 
-Specifically, each name/pair value is expected to be enclosed within `{%%}` markings and separated by a `:`. As components can be lengthy, it's not always ideal to inline documenation in your CSS/SCSS/LESS files. As such, emo allows you to load documentation from markdown files.
+Specifically, each name/pair value is expected to be enclosed within `{%%}` markings and separated by a `:`. As components can be lengthy, it's not always ideal to inline documenation in your CSS/SCSS/LESS files. As such, the Panopta style-guide generator allows you to load documentation from markdown files.
 
 ```scss
 
@@ -191,7 +191,7 @@ Specifically, each name/pair value is expected to be enclosed within `{%%}` mark
 
 ```
 
-As previously mentioned, emo can accept any number of name/value combinations, though it demands that name, category and description are used. Each name/value combination is available within the generated Swig templates via the `component` global. Use name/value combinations as you wish.
+As previously mentioned, the Panopta style-guide generator can accept any number of name/value combinations, though it demands that name, category and description are used. Each name/value combination is available within the generated Swig templates via the `component` global. Use name/value combinations as you wish.
 
 ```scss
 
@@ -215,7 +215,7 @@ As previously mentioned, emo can accept any number of name/value combinations, t
 
 ```
 
-The previous examples show name/value combinations within CSS comments. Emo is capable of scraping documention from within all comment types:
+The previous examples show name/value combinations within CSS comments. The Panopta style-guide generator is capable of scraping documention from within all comment types:
 
 ```scss
 
@@ -259,7 +259,7 @@ The previous examples show name/value combinations within CSS comments. Emo is c
 
 ## Categories
 
-Emo was inspired by [pattern lab](http://patternlab.io/), which categorizes UI components as atoms, molecules, organisms, templates, and pages. Emo uses a similar set of categories: elements, molecules, and organisms. In order for a component to show up in the generated style-guide, it must be placed in one of these categories.
+The Panopta style-guide generator was inspired by [pattern lab](http://patternlab.io/), which categorizes UI components as atoms, molecules, organisms, templates, and pages. The Panopta style-guide generator uses a similar set of categories: elements, molecules, and organisms. In order for a component to show up in the generated style-guide, it must be placed in one of these categories.
 
 ### Elements
 
