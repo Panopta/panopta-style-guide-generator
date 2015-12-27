@@ -4,12 +4,14 @@
     var regexs = require('../utils/regexs');
 
     var Janitor = function(mess) {
+        this.components = [];
+
         if (!mess) {
             return;
         }
 
-        this.components = [];
         this.keys = [];
+
         this.values = [];
 
         this.mess = mess[0].match(regexs.sections).map(function(item) {
@@ -18,10 +20,14 @@
                        .trim();
         });
 
-        return this.sweep();
+        this.sweep();
     };
 
     var proto = Janitor.prototype;
+
+    proto.get = function() {
+        return this.components;
+    };
 
     proto.sweep = function() {
         var keys;
@@ -53,8 +59,6 @@
 
             this.components[count][key] = this.values[i];
         }.bind(this));
-
-        return this.components;
     };
 
     proto.addKeys = function(keys) {
