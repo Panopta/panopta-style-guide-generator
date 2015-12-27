@@ -156,7 +156,7 @@
         }.bind(this));
 
         this.grunt.log.writeln('-----------------------------------');
-        this.grunt.log.writeln('Documented ' + this.components.length + ' components');
+        this.grunt.log.writeln('Documented ' + this.components.length + ' component(s)');
     };
 
     module.exports = StyleGuide;
